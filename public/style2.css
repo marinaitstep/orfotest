@@ -1,0 +1,50 @@
+.quest {
+    margin: 15px;
+}
+
+button {
+    background-color: rgb(242, 250, 166);
+
+}
+
+
+#score {
+
+    color: green;
+}
+#score2 {
+
+    color: red;
+}
+
+
+ol {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+
+}
+
+#all {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(242, 250, 166);
+
+}
+
+#all > div {
+    padding: 10px;
+}
+
+#butref {
+    margin-bottom: 30px;
+}
+#author {
+    margin-left: 20px;
+}

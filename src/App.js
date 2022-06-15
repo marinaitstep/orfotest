@@ -1,25 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import {Data} from "./Data"
 
-function App() {
+function Test() {
+
+  const [score, setScore] = useState(1)
+  const [score2, setScore2] = useState(1)
+
+  function refresh() {
+  window.location.reload()
+}
+
+ return (
+   <div>
+     <b>
+       <div  id="all">
+      <div id="desc">Вставьте правильное слово в предложение:
+        <div><span id="answ"></span> <span id="score"></span></div>
+         <div><span id="answ2"></span> <span id="score2"></span></div>
+         </div>
+         </div>
+     </b>
+
+     <ol>
+     {Data.map((data, key) => {
+      function Check(e) {
+        if(e.target.value === data.ok){
+          document.getElementById("answ").innerHTML = "правильно"
+          document.getElementById("answ").style.color = "green"
+          setScore(score + 1)
+          document.getElementById("score").innerHTML = score
+          e.target.disabled = "true"
+          e.target.style.backgroundColor = "lightgreen"
+          e.target.style.color = "black"
+        }
+        else{
+          document.getElementById("answ2").innerHTML = "ошибка"
+          document.getElementById("answ2").style.color = "red"
+          setScore2(score2 + 1)
+          document.getElementById("score2").innerHTML = score2
+          e.target.disabled = "true"
+          e.target.style.backgroundColor = "pink"
+          e.target.style.color = "black"
+        }
+      }
+      return(
+       <>
+       <li className="quest" key={key}>{data.quest}</li>
+     <div><button onClick={Check} disable="false" value={1}>{data.answer1}</button> <button onClick={Check} disable="false" value={2}>{data.answer2}</button></div>
+       </>    
+      )
+    })}
+    </ol> 
+     <center><button id="butref" onClick={refresh}>обнулиться</button> <a id="author" href="https://www.instagram.com/rukalitso_/">автор</a></center> 
+   </div>
+      
+ 
+    )
+ 
+}
+
+
+function NotFound() {
+  return <h2>Not found</h2>;
+}
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <Routes>
+               <Route path="/" element={<Test />} />
+         
+            <Route element={NotFound} />
+        
+       
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
-
-export default App;
