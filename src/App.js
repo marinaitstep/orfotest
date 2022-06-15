@@ -30,28 +30,38 @@ function Test() {
      {Data.map((data, key) => {
       function Check(e) {
         if(e.target.value === data.ok){
+          document.getElementById(data.id+1).style.display = "none"
+          document.getElementById(data.id+2).style.display = "none"
+          let answ = '<span style="color:green; font-weight:bold">'+e.target.innerHTML+'</span>'
+          let quest = document.getElementById(data.id).innerHTML
+          let questChanged = quest.replace(/_*_/i, answ)
+          document.getElementById(data.id).innerHTML = questChanged
           document.getElementById("answ").innerHTML = "правильно"
           document.getElementById("answ").style.color = "green"
           setScore(score + 1)
           document.getElementById("score").innerHTML = score
-          e.target.disabled = "true"
-          e.target.style.backgroundColor = "lightgreen"
-          e.target.style.color = "black"
+          
         }
         else{
+          document.getElementById(data.id+1).style.display = "none"
+          document.getElementById(data.id+2).style.display = "none"
+          let answ = '<span style="color:red; font-weight:bold">'+e.target.innerHTML+'</span>'
+          let quest = document.getElementById(data.id).innerHTML
+          let questChanged = quest.replace(/_*_/i, answ)
+          document.getElementById(data.id).innerHTML = questChanged
           document.getElementById("answ2").innerHTML = "ошибка"
           document.getElementById("answ2").style.color = "red"
           setScore2(score2 + 1)
           document.getElementById("score2").innerHTML = score2
-          e.target.disabled = "true"
-          e.target.style.backgroundColor = "pink"
-          e.target.style.color = "black"
+         
         }
       }
       return(
        <>
-       <li className="quest" key={key}>{data.quest}</li>
-     <div><button onClick={Check} disable="false" value={1}>{data.answer1}</button> <button onClick={Check} disable="false" value={2}>{data.answer2}</button></div>
+        <li className="quest" id={data.id}>{data.quest}</li>
+        <div>
+        <button onClick={Check} disable="false" value={1} key={key} id={data.id+1}>{data.answer1}</button> 
+        <button onClick={Check} disable="false" value={2} key={key} id={data.id+2}>{data.answer2}</button></div>
        </>    
       )
     })}
