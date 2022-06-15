@@ -61,7 +61,8 @@ function Test() {
         <li className="quest" id={data.id}>{data.quest}</li>
         <div>
         <button onClick={Check} disable="false" value={1} key={key} id={data.id+1}>{data.answer1}</button> 
-        <button onClick={Check} disable="false" value={2} key={key} id={data.id+2}>{data.answer2}</button></div>
+        <button onClick={Check} disable="false" value={2} key={key} id={data.id+2}>{data.answer2}</button>
+        </div>
        </>    
       )
     })}
