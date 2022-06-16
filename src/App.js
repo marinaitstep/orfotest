@@ -17,7 +17,7 @@ function NotFound() {
 
 function Nav(){
   return(
-    <div>
+    <div className="navcover">
     <Link to="/" className="nav">Русский для взрослых</Link>
     <Link to="/math1" className="nav">Математика 1 класс</Link>
     <Link to="/math2" className="nav">Математика 2 класс</Link>

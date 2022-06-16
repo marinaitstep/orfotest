@@ -12,7 +12,7 @@ function RusAdult() {
      <div>
        <b>
          <div  id="all">
-          <h1>Русский язык для взрослых</h1>
+          <h3>Русский язык для взрослых</h3>
         <div id="desc">Вставьте правильное слово в предложение:
           <div><span id="answ"></span> <span id="score"></span></div>
            <div><span id="answ2"></span> <span id="score2"></span></div>
