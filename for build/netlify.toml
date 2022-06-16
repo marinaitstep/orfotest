@@ -2,3 +2,13 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/math1*"
+  to = "/math1.html"
+  status = 200
+
+[[redirects]]
+from = "/math2*"
+to = "/math2.html"
+status = 200

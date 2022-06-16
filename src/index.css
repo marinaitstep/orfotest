@@ -20,7 +20,8 @@ code {
 
 button{
 background-color: rgb(242, 250, 166);
-margin-right: 10px;
+margin-left: 30px;
+border-color: lightgreen;
 }
 
 
@@ -35,11 +36,18 @@ color: green;
 
 
 ol{
+  list-style-type: none;
+  counter-reset: num;
   margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
 width: 60%;
+}
 
+li::before{
+content: counter(num) '. ';
+counter-increment: num; 
+font-weight: bold;
 
 }
 
@@ -64,4 +72,12 @@ background-color: rgb(242, 250, 166);
 
 #author{
   margin-left: 20px;
+}
+
+.nav{
+  background-color: aliceblue;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
