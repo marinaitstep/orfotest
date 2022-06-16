@@ -14,7 +14,7 @@ function Footer(){
         <>
         <center><button id="butref" onClick={refresh}>обнулитися</button> 
         <a id="author" href="https://www.instagram.com/alisafairytale/">автор</a> 
-        <i class="fa-solid fa-angles-up" onClick={ScrollTop} id="scrollToTopBtn"></i>
+        <div onClick={ScrollTop} id="scrollToTopBtn">UP</div>
         </center> 
         
         </>
