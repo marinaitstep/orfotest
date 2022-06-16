@@ -11,7 +11,7 @@ function Math2() {
      <div>
        <b>
          <div  id="all">
-          <h3>Математика 2 класс</h3>
+          <h3>Математика 2 клас</h3>
         <div id="desc">Виріши приклади:
           <div><span id="answ"></span> <span id="score"></span></div>
            <div><span id="answ2"></span> <span id="score2"></span></div>
