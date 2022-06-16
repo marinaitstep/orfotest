@@ -19,8 +19,8 @@ function Nav(){
   return(
     <div className="navcover">
     <Link to="/" className="nav">Русский для взрослых</Link>
-    <Link to="/math1" className="nav">Математика 1 класс</Link>
-    <Link to="/math2" className="nav">Математика 2 класс</Link>
+    <Link to="/math1" className="nav">Математика 1 клас</Link>
+    <Link to="/math2" className="nav">Математика 2 клас</Link>
     </div>
   )
 }
