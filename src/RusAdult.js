@@ -54,7 +54,7 @@ function RusAdult() {
          <>
           <li className="quest" id={data.id}>{data.quest}</li>
           <div>
-          <button onClick={Check} disable="false" value={1} key={key} id={data.id+1}>{data.answer1}</button> 
+          <button className="butleft" onClick={Check} disable="false" value={1} key={key} id={data.id+1}>{data.answer1}</button> 
           <button onClick={Check} disable="false" value={2} key={key} id={data.id+2}>{data.answer2}</button>
           </div>
          </>    

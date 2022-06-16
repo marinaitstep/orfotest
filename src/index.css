@@ -5,6 +5,9 @@
   button{
     font-size: 16px;
   }
+  ol{
+    width: 60%;
+    }
 }
 @media (min-width: 600px) and (max-width: 799px) { 
 body{
@@ -13,6 +16,9 @@ body{
 button{
   font-size: 14px;
 }
+ol{
+  width: 70%;
+  }
 }
 @media (max-width: 599px) { 
   body{
@@ -20,6 +26,9 @@ button{
   }
   button{
     font-size: 12px;
+  }
+  ol{
+  width: 80%;
   }
   }
 body {
@@ -47,7 +56,9 @@ background-color: rgb(242, 250, 166);
 margin-left: 10px;
 border-color: lightgreen;
 }
-
+.butleft{
+  margin-left: 30px;
+}
 
 #score {
   
@@ -65,7 +76,6 @@ ol{
   margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
-width: 80%;
 }
 
 li::before{
