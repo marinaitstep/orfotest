@@ -118,7 +118,6 @@ background-color: rgb(242, 250, 166);
 #scrollToTopBtn {
  position: absolute;
  right: 20%;
- bottom: -100%;
  background-color: rgb(242, 250, 166);
  border: none;
  border-radius: 50%;
