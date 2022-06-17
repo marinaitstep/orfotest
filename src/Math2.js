@@ -42,7 +42,7 @@ function Math2() {
             let quest = document.getElementById(data.id).innerHTML
             let questChanged = quest.replace(/_*_/i, answ)
             document.getElementById(data.id).innerHTML = questChanged
-            document.getElementById("answ2").innerHTML = "ошибка"
+            document.getElementById("answ2").innerHTML = "помилка"
             document.getElementById("answ2").style.color = "red"
             setScore2(score2 + 1)
             document.getElementById("score2").innerHTML = score2

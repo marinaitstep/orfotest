@@ -8,6 +8,9 @@
   ol{
     width: 60%;
     }
+  #all2{
+    top:140px;
+  }
 }
 @media (min-width: 600px) and (max-width: 799px) { 
 body{
@@ -19,6 +22,9 @@ button{
 ol{
   width: 70%;
   }
+  #all2{
+    top:120px;
+  }
 }
 @media (max-width: 599px) { 
   body{
@@ -29,6 +35,9 @@ ol{
   }
   ol{
   width: 80%;
+  }
+  #all2{
+    top:110px;
   }
   }
 body {
@@ -60,11 +69,11 @@ border-color: lightgreen;
   margin-left: 30px;
 }
 
-#score {
+#score, #score3 {
   
 color: green;
 }
-#score2 {
+#score2, #score4 {
 
   color: red;
 }
@@ -88,15 +97,23 @@ font-weight: bold;
 #all{
 margin-left: auto;
 margin-right: auto;
-width: 79%;
+width: 80%;
 position: sticky;
 top: 0;
 z-index: 1;
 background-color: rgb(242, 250, 166);
-
 }
 
-#all > div{
+#all2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: sticky;
+  z-index: 2;
+  background-color: rgb(242, 250, 166);
+  }
+
+#all, #all2 > div{
   padding: 10px;
 }
 
@@ -136,4 +153,7 @@ background-color: rgb(242, 250, 166);
  font-size: 16px;
  line-height: 48px;
  width: 48px;
+}
+.desc{
+  font-weight: bold;
 }
