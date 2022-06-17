@@ -64,7 +64,7 @@ function Math1() {
       </ol> 
      
       <div  id="all2">
-      <div className="desc">Виріши задачи:
+      <div className="desc">Виріши задачі:
         <div><span id="answ3"></span> <span id="score3"></span></div>
         <div><span id="answ4"></span> <span id="score4"></span></div>
       </div>
